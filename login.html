@@ -2,91 +2,97 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login Page</title>
+    <title>Static Web Page</title>
     <style>
-        * {
-            box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
         body {
             margin: 0;
-            height: 100vh;
-            background: #1e293b;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .login-container {
-            background: #ffffff;
-            padding: 30px;
-            width: 350px;
-            border-radius: 8px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-        }
-
-        .login-container h2 {
-            text-align: center;
-            margin-bottom: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f1f5f9;
             color: #1e293b;
         }
 
-        .login-container label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-            font-size: 14px;
-        }
-
-        .login-container input {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border-radius: 5px;
-            border: 1px solid #cbd5e1;
-        }
-
-        .login-container button {
-            width: 100%;
-            padding: 10px;
-            background: #2563eb;
-            border: none;
+        header {
+            background-color: #0f172a;
             color: #ffffff;
-            font-size: 16px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .login-container button:hover {
-            background: #1d4ed8;
-        }
-
-        .login-container .note {
-            margin-top: 15px;
+            padding: 20px;
             text-align: center;
-            font-size: 13px;
-            color: #64748b;
+        }
+
+        nav {
+            background-color: #1e293b;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #ffffff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .card {
+            background: #ffffff;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+            border-radius: 8px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+        }
+
+        footer {
+            background-color: #0f172a;
+            color: #ffffff;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
 <body>
 
-    <div class="login-container">
-        <h2>Login</h2>
-        <form>
-            <label>Username</label>
-            <input type="text" placeholder="Enter username" required>
+    <header>
+        <h1>Welcome to My Static Website</h1>
+        <p>Simple HTML + CSS page</p>
+    </header>
 
-            <label>Password</label>
-            <input type="password" placeholder="Enter password" required>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
 
-            <button type="submit">Login</button>
-        </form>
-        <div class="note">
-            Static page – no authentication
+    <main>
+        <div class="card">
+            <h2>Hello 👋</h2>
+            <p>
+                This is a static web page served using NGINX or Apache.
+                No backend, no database, just clean HTML and CSS.
+            </p>
         </div>
-    </div>
+
+        <div class="card">
+            <h2>Why Static?</h2>
+            <p>
+                Static sites are fast, secure, and easy to deploy with Docker.
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        © 2026 My Static Website
+    </footer>
 
 </body>
 </html>
